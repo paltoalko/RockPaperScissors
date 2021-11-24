@@ -13,26 +13,80 @@
 
         <button id="start">START GAME</button>
 
-        <p>Game consist of 5 rounds<br>You are playing against computer</p>
+        <p>Whoever scores 5 points wins<br>You are playing against computer</p>
 
         <a href="https://github.com/paltoalko" target="_blank">@martawesolowska</a>
     </div>
 
     <div class="gamescreen">
-        <h2>ROUND ONE</h2>
+        <h2 class="round">ROUND 1</h2>
         <div class="options">
-            <img src="media/PAPER.svg" alt="Paper icon" id="paper">
-        <img src="media/ROCK.svg" alt="Rock icon" id="rock">
-        <img src="media/SCISSORS.svg" alt="Scissors icon" id="scissors">
+            <div class="optioncard">
+                <img src="media/PAPER.svg" alt="Paper icon" id="paper" class="btn btn-paper">
+            </div>
+            <div class="optioncard">
+                <img src="media/ROCK.svg" alt="Rock icon" id="rock" class="btn btn-rock">
+            </div>
+            <div class="optioncard">
+                <img src="media/SCISSORS.svg" alt="Scissors icon" id="scissors" class="btn btn-scissors">
+            </div>
         </div>
         <p class="pick">PICK ONE</p>
-        <div>
-            <p>PLAYER score</p>
-            <p>COMPUTER score</p>
-        </div>
-        <a href="https://github.com/paltoalko" target="_blank" id="tag">@martawesolowska</a>
-
+        <div class='scoretab' style="position: relative; width: 250px;">
+            <div class="playerscore" style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+              0
+            </div>
+            <div class="computerscore" style="position: absolute; bottom: 0; right: 0; width: 100px; text-align:right;">
+              0
+            </div>
+            PLAYER <br />
+            COMPUTER <br />
+          </div>
+        <a href="https://github.com/paltoalko" target="_blank" id="tag">@martawesolowska</a>    
     </div>
+
+    <div class="roundresultscreen">
+        <div class="leftcolumn">
+            <div class="playerchoice">
+                <p>PLAYER</p> 
+                <img src="media/PAPER.svg" alt="Paper icon"  class="paper">
+                <img src="media/ROCK.svg" alt="Rock icon" class="rock">
+                <img src="media/SCISSORS.svg" alt="Scissors icon" class="scissors"> 
+            </div>
+
+        </div>
+        
+
+        <div class="middlecontainer">
+            <h2 class="roundround">ROUND 1</h2>
+            <h2 class="resulttxt">YOU WIN</h2>
+        
+
+        
+
+        <div class='scoretab' style="position: relative; width: 250px;">
+            <div class="roundplayerscore" style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+            0
+            </div>
+            <div class="roundcomputerscore" style="position: absolute; bottom: 0; right: 0; width: 100px; text-align:right;">
+            0
+            </div>
+            PLAYER <br />
+            COMPUTER <br />
+        </div>
+        <button id="nextround">CLICK ON SCREEN FOR NEXT ROUND</button>
+        <a href="https://github.com/paltoalko" target="_blank" id="tag">@martawesolowska</a>  
+        </div>
+        <div class="rightcolumn">
+            <div class="computerchoice">
+                <p>COMPUTER</p>
+                <img src="media/PAPER.svg" alt="Paper icon"  class="paper">
+                <img src="media/ROCK.svg" alt="Rock icon" class="rock">
+                <img src="media/SCISSORS.svg" alt="Scissors icon" class="scissors"> 
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

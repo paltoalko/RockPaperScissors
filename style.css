@@ -4,12 +4,12 @@
     font-family: 'Press Start 2P', cursive;
     padding: 0px;
     margin:0px;
-    background: black;
+    background: rgb(0, 0, 0);
     
 }
 
 .startscreen {
-    display: flex;
+    display: flex; /* flex */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -70,9 +70,18 @@ button#start:hover {
 }
 
 .gamescreen #rock, #paper, #scissors {
-    margin: 10% 15px;
     transition-duration:0.4s;
 
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
 }
 
 .gamescreen #rock:hover, #paper:hover, #scissors:hover {
@@ -88,11 +97,12 @@ button#start:hover {
     text-align: center;
 }
 
-.gamescreen div p {
+.gamescreen div.scoretab {
     font-size: 1.5vw;
     color: #EDDD00;
     white-space:nowrap;
-    text-align: center;
+    line-height: 150%;
+    
 }
 
 #tag {
@@ -113,4 +123,118 @@ button#start:hover {
 
 @media only screen and (min-width: 992px) {
     .gamescreen img {height:150px;}
+}
+
+
+.roundresultscreen {
+    display: none; /* none */
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    margin: 0;
+}
+
+.roundresultscreen h2.roundround {
+    font-size: 5vw;
+    color: #EDDD00;
+    white-space:nowrap;
+}
+
+.roundresultscreen h2.resulttxt {
+    font-size: 5vw;
+    color: white;
+}
+
+div .middlecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+div .leftcolumn p, div .rightcolumn p {
+    font-size: 3vw;
+    color: #A3A3A3;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+}
+
+div .middlecontainer .roundround {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+div .middlecontainer .resulttxt {
+    margin: 18% 15px 18% 15px;
+} 
+
+div.playerchoice, div.computerchoice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:5%;
+    margin-right: 5%;
+
+}
+
+
+.roundresultscreen #nextround {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5vw;
+    border: none;
+    color: #A3A3A3;
+    position: relative;
+    transition-duration: 0.4s;
+    margin-top: 10%;
+}
+.roundresultscreen #nextround:hover {
+    color: white;
+}
+
+.roundresultscreen div.scoretab {
+    font-size: 1.5vw;
+    color: #EDDD00;
+    white-space:nowrap;
+    line-height: 150%;
+}
+
+/* change the img to vis/hidden */
+
+.playerchoice .paper {
+    display: none;
+}
+.playerchoice .rock {
+    display: none;
+}
+.playerchoice .scissors {
+    display: none;
+}
+
+.computerchoice .paper {
+    display: none;
+}
+.computerchoice .rock {
+    display: none;
+}
+.computerchoice .scissors {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .roundresultscreen img {height:50px;}
+}
+
+@media only screen and (min-width: 600px) {
+    .roundresultscreen img {height:100px;}
+}
+
+@media only screen and (min-width: 992px) {
+    .roundresultscreen img {height:150px;}
+
 }
