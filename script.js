@@ -1,4 +1,3 @@
-//Starts game
 const startScreen = document.querySelector(".startscreen");
 const gameScreen = document.querySelector(".gamescreen");
 
@@ -6,7 +5,7 @@ document.getElementById("start").addEventListener("click", function() {
     startScreen.style.display = "none"
     gameScreen.style.display = "flex" 
 })
-// transition to round result screen
+
 const roundResultScreen = document.querySelector(".roundresultscreen")
 
 document.querySelectorAll(".btn").forEach(el => el.addEventListener('click', function (e) {
@@ -32,7 +31,6 @@ let playerScore = 0;
 let computerScore = 0;
 let round = 1;
 
-// change scores
 function changeScores () {
     playerScores.innerHTML = `${playerScore}`
     computerScores.innerHTML = `${computerScore}`
@@ -40,14 +38,12 @@ function changeScores () {
     roundComputerScores.innerHTML = `${computerScore}`
 }
 
-// change round
 function changeRound () {
     round += 1;
     rounds.innerHTML = `ROUND ${round}`;
     roundsround.innerHTML = `ROUND ${round}`;
 }
 
-// change back to game screen
 const changeScreen = function () {
     gameScreen.style.display = "flex";
     roundResultScreen.style.display = "none";
@@ -55,7 +51,6 @@ const changeScreen = function () {
 }
 document.querySelector(".roundresultscreen").addEventListener("click", changeScreen , true)
 
-// computer play  
 function computerPlay() {
     let gameOptions = ['scissors', 'rock', 'paper'];
     let computerChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
@@ -75,7 +70,7 @@ function computerPlay() {
     return computerChoice
 };
 
-// Round rules
+
 function playRound (playerChoice,computerChoice) {
     
     switch (true) {
@@ -99,7 +94,6 @@ function playRound (playerChoice,computerChoice) {
     return [playerScore,computerScore]
 };
 
-// end game
 
 function endGame (playerScore,computerScore) {
     if (computerScore == 5) {
@@ -124,7 +118,6 @@ function endGame (playerScore,computerScore) {
 
 }
 
-// Play game 
 function playGame() {
     let playerChoice;
     gameOptions.forEach((option) => {
@@ -152,8 +145,6 @@ function playGame() {
     });
 });
 };
-
-
 
 playGame ();
 
