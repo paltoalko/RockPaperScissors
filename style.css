@@ -67,6 +67,11 @@ button#start:hover {
     font-size: 5vw;
     color: #EDDD00;
     white-space:nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .gamescreen #rock, #paper, #scissors {
@@ -111,6 +116,7 @@ button#start:hover {
     margin-bottom: 5px;
     text-decoration: none;
     color: #770098;
+    font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -138,6 +144,11 @@ button#start:hover {
     font-size: 5vw;
     color: #EDDD00;
     white-space:nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .roundresultscreen h2.resulttxt {
@@ -166,10 +177,16 @@ div .middlecontainer .roundround {
     text-align: center;
     justify-content: center;
     align-items: center;
+    
 }
 
 div .middlecontainer .resulttxt {
     margin: 18% 15px 18% 15px;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 } 
 
 div.playerchoice, div.computerchoice {

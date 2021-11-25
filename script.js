@@ -48,12 +48,12 @@ function changeRound () {
 }
 
 // change back to game screen
-
-document.querySelector(".roundresultscreen").addEventListener("click", function () {
+const changeScreen = function () {
     gameScreen.style.display = "flex";
     roundResultScreen.style.display = "none";
     changeRound ();
-})
+}
+document.querySelector(".roundresultscreen").addEventListener("click", changeScreen , true)
 
 // computer play  
 function computerPlay() {
@@ -105,8 +105,9 @@ function endGame (playerScore,computerScore) {
     if (computerScore == 5) {
         roundsround.innerHTML = `END OF GAME`;
         roundtxt.innerHTML = "YOU LOST";
-        document.querySelector("#nextround").innerHTML = "CLICK ON SCREEN TO RESTART GAME"
-        document.querySelector(".roundresultscreen").addEventListener("click", function () {
+        document.querySelector(".roundresultscreen").removeEventListener("click", changeScreen , true)
+        document.querySelector("#nextround").innerHTML = "CLICK HERE TO RESTART GAME"
+        document.querySelector("#nextround").addEventListener("click", function () {
             window.location.reload();
         })
         
@@ -114,8 +115,9 @@ function endGame (playerScore,computerScore) {
     } else if (playerScore == 5) {
         roundsround.innerHTML = `END OF GAME`;
         roundtxt.innerHTML = "YOU WON";
-        document.querySelector("#nextround").innerHTML = "CLICK ON SCREEN TO RESTART GAME"
-        document.querySelector(".roundresultscreen").addEventListener("click", function () {
+        document.querySelector(".roundresultscreen").removeEventListener("click", changeScreen , true)
+        document.querySelector("#nextround").innerHTML = "CLICK HERE TO RESTART GAME"
+        document.querySelector("#nextround").addEventListener("click", function () {
             window.location.reload();
         })
     }
